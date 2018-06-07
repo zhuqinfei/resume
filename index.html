@@ -92,40 +92,90 @@
            </footer>		   
      </div>
    </div>
-    <a class="button" href="#">下载 PDF 简历</a>
-
-      <p>
-        朱钦飞，前端工程师，现在在前端中工作，负责前端的开发。<br>
+   <p class="downloadresume-wrapper">
+     <a class="downloadresume" href="./resume.pdf" target="_blank" download>下载 PDF 简历</a>
+   </p>
+      <p class="selfintroduction">
+        朱钦飞，毕业于肇庆学院，在2017年开始接触前端这个行业，个人性格活泼开朗，喜欢运动和摄影，对人大方，勇于挑战困难，曾前在某公司担任前端工程师，现在在前端中工作，负责前端的开发。
+        <br>
         技能：前端开发，Rails 开发，Node.js 开发
       </p>
    </main>
-   <section>
+   <section class="skills">
       <h2>技能</h2>
-	 <ol>
-	<li>HTML 5 &amp; css 3</li>
-	<li>Javascript</li>
-	<li>jQuery</li>
-	<li>Vue</li>
-	<li>React</li>
-	<li>HTTP</li>
+	 <ol class="clearfix">
+	 <li>
+     <h3> HTML 5 &amp; css 3</h3>
+     <div class="progressbar">
+        <div class="progress" style="width:60%"></div>
+     </div>
+   </li>
+   <li>
+      <h3> Javascript</h3>
+      <div class="progressbar">
+         <div class="progress" style="width:80%"></div>
+      </div>
+    </li>
+    <li>
+        <h3>jQuery</h3>
+        <div class="progressbar">
+           <div class="progress" style="width:40%"></div>
+        </div>
+      </li>
+      <li>
+          <h3>Vue</h3>
+          <div class="progressbar">
+             <div class="progress" style="width:85%"></div>
+          </div>
+        </li>
+        <li>
+            <h3>React</h3>
+            <div class="progressbar">
+               <div class="progress" style="width:78%"></div>
+            </div>
+          </li>
+          <li>
+              <h3>HTTP</h3>
+              <div class="progressbar">
+                 <div class="progress" style="width:57%"></div>
+              </div>
+            </li>
          </ol>
    </section>
-   <section>
+   <section class="portfolio">
       <h2>作品集</h2>
       <nav>
-        <ol>
-          <li>所有</li>
-          <li>框架</li>
-          <li>原生JS&amp;CSS</li>
+        <ol class="clearfix">
+          <li id="portfolio1">所有</li>
+          <li id="portfolio2">框架</li>
+          <li id="portfolio3">原生JS&amp;CSS</li>
         </ol>
+        <div id="portfoliobar" class="bar state-1">
+          <div class="bar-inner"></div>
+        </div>
       </nav>
-
-      <div class="jobs">
-        <div class="big"></div>
-        <div class="small"></div>
-        <div class="small"></div>
+      <script>
+      portfolio1.onclick= function(){
+        portfoliobar.className = 'bar state-1'
+      }
+      portfolio2.onclick= function(){
+        portfoliobar.className = 'bar state-2'
+      }
+      portfolio3.onclick= function(){
+        portfoliobar.className = 'bar state-3'
+      }
+      </script>
+      <div class="works" style="height: 576px;">
+        <div class="big">
+          <img src="./img/1.jpg" alt="作品1" style="width:100%">
+        </div>
+        <div class="small" style="top:0px; left:624px;">
+          <img src="./img/2.jpg" alt="作品2" style="width:100%">
+        </div>
+        <div class="small" style="top:317px; left:624px;">
+          <img src="./img/3.jpg" alt="作品3" style="width:100%">
+        </div>
       </div>
-
     </section>
  </body>
 </html>
