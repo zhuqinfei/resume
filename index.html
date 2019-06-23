@@ -1,181 +1,308 @@
 <!DOCTYPE html>
 <html>
- <head>
-   <title>朱钦飞的个人简历</title>
-   <link rel="stylesheet" href="./a.css">
-   <script src="//at.alicdn.com/t/font_677044_pifd1sk3ytfyldi.js"></script>
-   <style type="text/css">
+
+<head>
+  <title>朱钦飞的个人简历</title>
+  <link rel="stylesheet" href="./main.css">
+  <link rel="stylesheet" href="./loading.css">
+  <script src="//at.alicdn.com/t/font_677044_pifd1sk3ytfyldi.js"></script>
+  <style type="text/css">
     .icon {
-       width: 1em; height: 1em;
-       vertical-align: -0.15em;
-       fill: currentColor;
-       overflow: hidden;
+      width: 1em;
+      height: 1em;
+      vertical-align: -0.15em;
+      fill: currentColor;
+      overflow: hidden;
     }
-    </style> 
- </head>
- <body>
-   <div class="topNavBar">
-     <div class="topNavBar-inner clearfix">
-        <a class="logo" href="#" alt="logo" style="float: left; ">
-            <span class="rs">RS</span><span class="card">card</span>
-          </a>
-           <nav style="float: right;">
-             <ul class="clearfix">
-               <li><a href="#">ABOUT</a>
-               <li><a href="#">SKILLS</a>
-               <li><a href="#">EXPERIENCE</a>
-               <li><a href="#">PRICING</a>
-               <li><a href="#">BLOG</a>
-               <li><a href="#">CALENDAR</a>
-               <li><a href="#">CONTACT</a>
-               <li><a href="#">OTHER</a>
-               <li><a href="#">ALL DEMOS</a>
-              </ul>
-             </nav>
-     </div>  
-   </div>
-   <div class="banner">
-      <div class="mask"></div>
-   </div>
-   <main>
-   <div class="usercard">
-     <div class="pictureAndText clearfix">
-      <div class="picture">
-       <img src="./img/avatar1.jpg" width="299" height="347" alt="头像">
-      </div>
-      <div class="text">
-	     <span class="welcome">Hello
-         <span  class="triangle"></span>
-       </span>
-	     <h1>朱钦飞</h1>
-	     <p>前端开发工程师</p>
-	     <hr>
-	       <dl>
+
+    .size-welcome {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #888;
+      z-index: 1;
+    }
+
+    .size-welcome.active {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div id='sizeWelcome' class="size-welcome active">
+    <div class="loading"></div>
+  </div>
+  <div id="topNavBar" class="topNavBar">
+    <div class="topNavBar-inner clearfix">
+      <a class="logo" href="#" alt="logo" style="float: left; ">
+        <span class="rs">RS</span>
+        <span class="card">card</span>
+      </a>
+      <nav class="menu" style="float: right;">
+        <ul class="clearfix">
+          <li>
+            <a href="#sizeAbout">关于</a>
+            <li>
+              <a href="#sizeSkills">技能</a>
+              <li>
+                <a href="#sizeWorks">作品</a>
+                <ul class="submenu">
+                  <li>作品1</li>
+                  <li>作品2</li>
+                  <li>作品3</li>
+                </ul>
+                <li>
+                  <a href="#">博客</a>
+                  <ul class="submenu">
+                    <li>博客1</li>
+                    <li>博客2</li>
+                    <li>博客3</li>
+                  </ul>
+                  <li>
+                    <a href="#">日历</a>
+                    <li>
+                      <a href="#">联系方式</a>
+                      <li>
+                        <a href="#">其他</a>
+                        <li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <div class="banner">
+    <div class="mask"></div>
+  </div>
+  <main>
+    <div data-x id="sizeAbout" class="usercard">
+      <div class="pictureAndText clearfix">
+        <div class="picture">
+          <img src="./img/avatar1.jpg" width="299" height="347" alt="头像">
+        </div>
+        <div class="text">
+          <span class="welcome">Hello
+            <span class="triangle"></span>
+          </span>
+          <h1>朱钦飞</h1>
+          <p>前端开发工程师</p>
+          <hr>
+          <dl>
             <dt>年龄</dt>
-	          <dd>18</dt>
-	          <dt>所在城市</dt>
-	          <dd>深圳</dt>
-	          <dt>邮箱</dt>
-	          <dd>1586859700@qq.com</dd>
-	          <dt>手机</dt>
-	          <dd>13662621234</dd>
-	       </dl>
-	     </hr>
-       </div>
-       </div>
-	     <footer class="media">
-	          <a href="#">
-              <svg class="icon" aria-hidden="true">
-                <use xlink:href="#icon-githublogo"></use>
-              </svg>
-            </a>
-            <a href="#">
-                <svg class="icon" aria-hidden="true">
-                  <use xlink:href="#icon-twitter"></use>
-                </svg>
-              </a>
-              <a href="#">
-              <svg class="icon" aria-hidden="true">
-                <use xlink:href="#icon-jianshu"></use>
-              </svg>
-            </a>
-            <a href="#">
-                <svg class="icon" aria-hidden="true">
-                  <use xlink:href="#icon-weibo"></use>
-                </svg>
-              </a>
-              <a href="#">
-                  <svg class="icon" aria-hidden="true">
-                    <use xlink:href="#icon-jirengulogojichu1"></use>
-                  </svg>
-                </a>
-           </footer>		   
-     </div>
-   </div>
-   <p class="downloadresume-wrapper">
-     <a class="downloadresume" href="./resume.pdf" target="_blank" download>下载 PDF 简历</a>
-   </p>
-      <p class="selfintroduction">
-        朱钦飞，毕业于肇庆学院，在2017年开始接触前端这个行业，个人性格活泼开朗，喜欢运动和摄影，对人大方，勇于挑战困难，曾前在某公司担任前端工程师，现在在前端中工作，负责前端的开发。
-        <br>
-        技能：前端开发，Rails 开发，Node.js 开发
-      </p>
-   </main>
-   <section class="skills">
-      <h2>技能</h2>
-	 <ol class="clearfix">
-	 <li>
-     <h3> HTML 5 &amp; css 3</h3>
-     <div class="progressbar">
-        <div class="progress" style="width:60%"></div>
-     </div>
-   </li>
-   <li>
-      <h3> Javascript</h3>
-      <div class="progressbar">
-         <div class="progress" style="width:80%"></div>
+            <dd>18</dt>
+              <dt>所在城市</dt>
+              <dd>深圳</dt>
+                <dt>邮箱</dt>
+                <dd>1586859700@qq.com</dd>
+                <dt>手机</dt>
+                <dd>13662621234</dd>
+          </dl>
+          </hr>
+        </div>
       </div>
-    </li>
-    <li>
-        <h3>jQuery</h3>
+      <footer class="media">
+        <a href="#">
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-githublogo"></use>
+          </svg>
+        </a>
+        <a href="#">
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-twitter"></use>
+          </svg>
+        </a>
+        <a href="#">
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-jianshu"></use>
+          </svg>
+        </a>
+        <a href="#">
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-weibo"></use>
+          </svg>
+        </a>
+        <a href="#">
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-jirengulogojichu1"></use>
+          </svg>
+        </a>
+      </footer>
+    </div>
+    </div>
+    <p class="downloadresume-wrapper">
+      <a class="downloadresume" href="./resume.pdf" target="_blank" download>下载 PDF 简历</a>
+    </p>
+    <p class="selfintroduction">
+      朱钦飞，毕业于肇庆学院，在2017年开始接触前端这个行业，个人性格活泼开朗，喜欢运动和摄影，对人大方，勇于挑战困难，曾前在某公司担任前端工程师，现在在前端中工作，负责前端的开发。
+      <br> 技能：前端开发，Rails 开发，Node.js 开发
+    </p>
+  </main>
+  <section data-x id="sizeSkills" class="skills">
+    <h2>技能</h2>
+    <ol class="clearfix">
+      <li>
+        <h3> HTML 5 &amp; css 3</h3>
         <div class="progressbar">
-           <div class="progress" style="width:40%"></div>
+          <div class="progress" style="width:60%"></div>
         </div>
       </li>
       <li>
-          <h3>Vue</h3>
-          <div class="progressbar">
-             <div class="progress" style="width:85%"></div>
-          </div>
-        </li>
-        <li>
-            <h3>React</h3>
-            <div class="progressbar">
-               <div class="progress" style="width:78%"></div>
-            </div>
-          </li>
-          <li>
-              <h3>HTTP</h3>
-              <div class="progressbar">
-                 <div class="progress" style="width:57%"></div>
-              </div>
-            </li>
-         </ol>
-   </section>
-   <section class="portfolio">
-      <h2>作品集</h2>
-      <nav>
-        <ol class="clearfix">
-          <li id="portfolio1">所有</li>
-          <li id="portfolio2">框架</li>
-          <li id="portfolio3">原生JS&amp;CSS</li>
-        </ol>
-        <div id="portfoliobar" class="bar state-1">
-          <div class="bar-inner"></div>
+        <h3> Javascript</h3>
+        <div class="progressbar">
+          <div class="progress" style="width:80%"></div>
         </div>
-      </nav>
-      <script>
-      portfolio1.onclick= function(){
+      </li>
+      <li>
+        <h3>jQuery</h3>
+        <div class="progressbar">
+          <div class="progress" style="width:40%"></div>
+        </div>
+      </li>
+      <li>
+        <h3>Vue</h3>
+        <div class="progressbar">
+          <div class="progress" style="width:85%"></div>
+        </div>
+      </li>
+      <li>
+        <h3>React</h3>
+        <div class="progressbar">
+          <div class="progress" style="width:78%"></div>
+        </div>
+      </li>
+      <li>
+        <h3>HTTP</h3>
+        <div class="progressbar">
+          <div class="progress" style="width:57%"></div>
+        </div>
+      </li>
+    </ol>
+  </section>
+  <section data-x id="sizeWorks" class="portfolio">
+    <h2>作品集</h2>
+    <nav>
+      <ol class="clearfix">
+        <li id="portfolio1">所有</li>
+        <li id="portfolio2">框架</li>
+        <li id="portfolio3">原生JS&amp;CSS</li>
+      </ol>
+      <div id="portfoliobar" class="bar state-1">
+        <div class="bar-inner"></div>
+      </div>
+    </nav>
+    <script>
+      portfolio1.onclick = function () {
         portfoliobar.className = 'bar state-1'
       }
-      portfolio2.onclick= function(){
+      portfolio2.onclick = function () {
         portfoliobar.className = 'bar state-2'
       }
-      portfolio3.onclick= function(){
+      portfolio3.onclick = function () {
         portfoliobar.className = 'bar state-3'
       }
-      </script>
-      <div class="works" style="height: 576px;">
-        <div class="big">
-          <img src="./img/1.jpg" alt="作品1" style="width:100%">
-        </div>
-        <div class="small" style="top:0px; left:624px;">
-          <img src="./img/2.jpg" alt="作品2" style="width:100%">
-        </div>
-        <div class="small" style="top:317px; left:624px;">
-          <img src="./img/3.jpg" alt="作品3" style="width:100%">
-        </div>
+    </script>
+    <div class="works" style="height: 576px;">
+      <div class="big">
+        <img src="./img/1.jpg" alt="作品1" style="width:100%">
       </div>
-    </section>
- </body>
+      <div class="small" style="top:0px; left:624px;">
+        <img src="./img/2.jpg" alt="作品2" style="width:100%">
+      </div>
+      <div class="small" style="top:317px; left:624px;">
+        <img src="./img/3.jpg" alt="作品3" style="width:100%">
+      </div>
+    </div>
+  </section>
+</body>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.4.0/Tween.min.js></script>
+<script>
+  setTimeout(function () {
+    sizeWelcome.classList.remove('active')
+  }, 1000)
+
+  let specialTags = document.querySelectorAll('[data-x]')
+  for (let i = 0; i < specialTags.length; i++) {
+    specialTags[i].classList.add('offset')
+  }
+
+  setTimeout(function () {
+    findClosest()
+  }, 1000)
+  window.onscroll = function (x) {
+    if (window.scrollY > 0) {
+      topNavBar.classList.add('sticky')
+    } else {
+      topNavBar.classList.remove('sticky')
+    }
+    findClosest()
+  }
+
+  function findClosest() {
+    let specialTags = document.querySelectorAll('[data-x]')
+    let minIndex = 0
+    for (let i = 1; i < specialTags.length; i++) {
+      if (Math.abs(specialTags[i].offsetTop - window.scrollY) < Math.abs(specialTags[minIndex].offsetTop - window.scrollY)) {
+        minIndex = i
+      }
+    }
+    //minIndex 就是距离窗口顶部最近的元素
+    specialTags[minIndex].classList.remove('offset')
+    let id = specialTags[minIndex].id
+    let a = document.querySelector('a[href="#' + id + '"]')
+    let li = a.parentNode
+    let brotherAndMe = li.parentNode.children
+    for (let i = 0; i < brotherAndMe.length; i++) {
+      brotherAndMe[i].classList.remove('highlight')
+    }
+    li.classList.add('highlight')
+  }
+
+
+  let liTags = document.querySelectorAll('nav.menu>ul>li')
+  for (let i = 0; i < liTags.length; i++) {
+    liTags[i].onmouseenter = function (x) {
+      x.currentTarget.classList.add('active')
+    }
+    liTags[i].onmouseleave = function (x) {
+      x.currentTarget.classList.remove('active')
+    }
+  }
+
+  let aTags = document.querySelectorAll("nav.menu>ul>li>a")
+
+  function animate(time) {    //缓动的文件引用函数
+    requestAnimationFrame(animate);
+    TWEEN.update(time);
+  }
+  requestAnimationFrame(animate);
+
+  for (let i = 0; i < aTags.length; i++) {
+    aTags[i].onclick = function (x) {
+      x.preventDefault()
+      let a = x.currentTarget
+      let href = a.getAttribute('href')
+      let element = document.querySelector(href)
+      let top = element.offsetTop
+
+      let currentTop = window.scrollY
+      let targetTop = top - 80
+      var s = targetTop - currentTop
+      var coords = { y: currentTop };//缓慢效果实现过程
+      var t = Math.abs(s / 100 * 300)
+      if (t > 500) { t = 500 }
+      const tween = new TWEEN.Tween(coords)
+        .to({ y: targetTop }, t)
+        .easing(TWEEN.Easing.Quadratic.InOut)
+        .onUpdate(() => {
+          window.scrollTo(0, coords.y)
+        })
+        .start();
+    }
+  }
+</script>
+
 </html>

@@ -33,12 +33,21 @@ h1,h2,h3,h4,h5,h6{
     top:0;
     left:0;
     width:100%;
+    transition:all 0.5s;
+    color: #b7b7b7;
+}
+.topNavBar.sticky{
+    background:white;
+    padding:10px 0;
+    z-index:1;
+    color:#3d4451;
+    box-shadow:0 0 10px rgba(0,0,0,0.2);
 }
 .topNavBar-inner{
     padding:0 16px;
 }
 .topNavBar nav{
-    padding-top: 7px;
+    padding-top: 5px;
 }
 .topNavBar nav>ul{
     list-style-type: none;
@@ -49,18 +58,54 @@ h1,h2,h3,h4,h5,h6{
     float: left;
     margin-left: 17px;
     margin-right: 17px;
+    position: relative;
 }.topNavBar nav>ul>li>a{
     font-size: 12px;
-    color: #b7b7b7;
     font-weight: bold;
+    color:inherit;
     border-top: 3px solid transparent;
     border-bottom: 3px solid transparent;
     padding-top: 5px;
     padding-bottom: 5px;
     display: block;
+    position: relative;
 }
-.topNavBar nav>ul>li>a:hover{
-    border-bottom: 3px solid #e06567;
+.topNavBar nav>ul>li.active>a::after,
+.topNavBar nav>ul>li.highlight>a::after{
+   content:'';
+   display:block;
+   position: absolute;
+   top:100%;
+   left: 0;
+   width:100%;
+   height:3px;
+   background:#e06567;
+   animation:menuSlide 0.3s
+}
+@keyframes menuSlide{
+    from{width:0;}
+    to{width:100%;}
+}
+.topNavBar .submenu{
+    display: none;
+}
+.topNavBar li.active>.submenu{
+    display: block;
+    position: absolute;
+    top:100%;
+    right:0;
+    background:white;
+    color:#3d4451;
+    box-shadow:0 0 5px rgba(0,0,0,0.5);
+    animation:submenuSlide 0.3s;
+}
+@keyframes submenuSlide{
+    from{margin-right:100%}
+    to{margin-right:0%}
+}
+.topNavBar .submenu>li{
+    white-space: nowrap;
+    padding:5px 10px;
 }
 .topNavBar .logo{
     font-size:24px;
@@ -232,12 +277,18 @@ section.skills .progressbar{
    height: 5px;
    background: #fae1e1;
    margin:4px 0px 40px;
+   overflow: hidden;
 }
 section.skills .progressbar .progress{
     height: 5px;
     width: 50%;
     background: #e6686a;
     border-radius: 2px;
+    transform: translateX(0);
+    transition:all 0.5s;
+}
+section.skills.offset .progress{
+    transform: translateX(-100%);
 }
 section.portfolio{
     text-align: center;
@@ -293,4 +344,14 @@ section.portfolio .works> .big,
 section.portfolio .works> .small{
     position: absolute;
     
+}
+[data-x].active{
+    outline:10px solid red;
+}
+[data-x].offset{
+    transform: translateY(100px);
+}
+[data-x]{
+    transform: translateY(0);
+    transition:all 0.5S;
 }
