@@ -5,6 +5,7 @@
   <title>朱钦飞的个人简历</title>
   <link rel="stylesheet" href="./main.css">
   <link rel="stylesheet" href="./loading.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
   <script src="//at.alicdn.com/t/font_677044_pifd1sk3ytfyldi.js"></script>
   <style type="text/css">
     .icon {
@@ -205,20 +206,58 @@
         portfoliobar.className = 'bar state-3'
       }
     </script>
-    <div class="works" style="height: 576px;">
-      <div class="big">
-        <img src="./img/1.jpg" alt="作品1" style="width:100%">
+
+    <!-- 轮播工具模板插入 -->
+    <style>  
+      .swiper {
+        width: 600px;
+        height: 300px;
+      }
+      .swiper-slide {
+        background: white;
+      }
+    </style>
+    <!-- Slider main container -->
+    <div class="swiper">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">Slide 1</div>
+        <div class="swiper-slide">Slide 2</div>
+        <div class="swiper-slide">Slide 3</div>
+        ...
       </div>
-      <div class="small" style="top:0px; left:624px;">
-        <img src="./img/2.jpg" alt="作品2" style="width:100%">
-      </div>
-      <div class="small" style="top:317px; left:624px;">
-        <img src="./img/3.jpg" alt="作品3" style="width:100%">
-      </div>
+      <!-- If we need pagination -->
+      <div class="swiper-pagination"></div>
+    
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
     </div>
+
   </section>
 </body>
 <script src=https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.4.0/Tween.min.js></script>
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+<script>
+  const swiper = new Swiper('.swiper', {
+    // Optional parameters
+    // direction: 'vertical',
+    loop: true,
+
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+    },
+
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+</script>
+
 <script>
   setTimeout(function () {
     sizeWelcome.classList.remove('active')
