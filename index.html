@@ -3,9 +3,9 @@
 
 <head>
   <title>朱钦飞的个人简历</title>
-  <link rel="stylesheet" href="./main.css">
   <link rel="stylesheet" href="./loading.css">
   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="./main.css">
   <script src="//at.alicdn.com/t/font_677044_pifd1sk3ytfyldi.js"></script>
   <style type="text/css">
     .icon {
@@ -185,55 +185,25 @@
   </section>
   <section data-x id="sizeWorks" class="portfolio">
     <h2>作品集</h2>
-    <nav>
-      <ol class="clearfix">
-        <li id="portfolio1">所有</li>
-        <li id="portfolio2">框架</li>
-        <li id="portfolio3">原生JS&amp;CSS</li>
-      </ol>
-      <div id="portfoliobar" class="bar state-1">
-        <div class="bar-inner"></div>
-      </div>
-    </nav>
-    <script>
-      portfolio1.onclick = function () {
-        portfoliobar.className = 'bar state-1'
-      }
-      portfolio2.onclick = function () {
-        portfoliobar.className = 'bar state-2'
-      }
-      portfolio3.onclick = function () {
-        portfoliobar.className = 'bar state-3'
-      }
-    </script>
 
     <!-- 轮播工具模板插入 -->
-    <style>  
-      .swiper {
-        width: 600px;
-        height: 300px;
-      }
-      .swiper-slide {
-        background: white;
-      }
     </style>
     <!-- Slider main container -->
     <div class="swiper">
       <!-- Additional required wrapper -->
       <div class="swiper-wrapper">
         <!-- Slides -->
-        <div class="swiper-slide">Slide 1</div>
-        <div class="swiper-slide">Slide 2</div>
-        <div class="swiper-slide">Slide 3</div>
-        ...
+        <img src="./img/works/nav-page.png" class="swiper-slide">
+        <img src="./img/works/canvas.jpg" class="swiper-slide">
+        <img src="./img/works/apple-style-slides.png" class="swiper-slide">
       </div>
       <!-- If we need pagination -->
       <div class="swiper-pagination"></div>
     
       <!-- If we need navigation buttons -->
+    </div>
       <div class="swiper-button-prev"></div>
       <div class="swiper-button-next"></div>
-    </div>
 
   </section>
 </body>
