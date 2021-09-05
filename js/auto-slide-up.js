@@ -1,4 +1,6 @@
-//添加offset类
+//防止产生全局变量，所以添加匿名函数，并.call()立即，加!是防止浏览器出错
+!function(){  
+    //添加offset类
 let specialTags = document.querySelectorAll('[data-x]')
 for (let i = 0; i < specialTags.length; i++) {
     specialTags[i].classList.add('offset')
@@ -41,3 +43,6 @@ function findClosestAndRemoveOffset() {
       x.currentTarget.classList.remove('active')
     }
   }
+
+}.call()
+
