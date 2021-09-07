@@ -254,6 +254,7 @@ section.portfolio{
     margin-right: auto;
 }
 section.skills>h2,
+section.message>h2,
 section.portfolio>h2{
     color: #3d4451;
     font-size: 34px;
@@ -334,4 +335,14 @@ section.portfolio .swiper-button-next{
 [data-x]{
     transform: translateY(0);
     transition:all 0.5S;
+}
+
+section.message>ol{
+    max-width:700px;
+    margin:0 auto;
+    border-top:1px solid #DDD;
+}
+section.message>ol>li{
+    padding:16px;
+    border-bottom: 1px solid #DDD;
 }
