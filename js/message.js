@@ -3,13 +3,25 @@ AV.init({
     appKey: "a1StNncKamK9yDqGUPqM3KvX",
     serverURL: "https://s5zf7aoh.lc-cn-n1-shared.com"
   });
-console.log('运行到这里没有报错')
 
 
-const TestObject = AV.Object.extend('TestObject');
-const testObject = new TestObject();
-testObject.set('words', 'Hello world!');
-testObject.save().then((testObject) => {
-  console.log('保存成功。')
+let  myForm=document.querySelector('#postMessageFrom')
+myForm.addEventListener('submit',function(e){
+   e.preventDefault()
+   let content=myForm.querySelector('input[name=content]').value
+   //创建 名字为Message的表
+   var Message = AV.Object.extend('Message');
+   //在表中创建一行数据
+   var message = new Message();
+   //数据内容是words:'Hello world!'保存
+  //保存成功打印出'保存成功。'
+   message.set('content', content);
+   message.save().then((message)=>{
+     console.log("保存成功")
+   })
 })
+
+
+
+
 
